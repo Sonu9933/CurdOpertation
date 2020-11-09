@@ -24,7 +24,6 @@ export const EditEmployee = route => {
   },[Id, state.employees]);
 
   const onSubmit = e => {
-    e.preventDefault();
     dispatch({
       type: UPDATE,
       payload: selectedUser
