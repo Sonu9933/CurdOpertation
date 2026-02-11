@@ -29,8 +29,8 @@ export const AddCar : React.FunctionComponent = () => {
 
     return (
         <div className="container">
-            <div className="row">
-                <div className="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+            <div className="row border">
+                <div className="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto form p-4">
                     <h1 className="display-4 py-2 text-truncate">Add New Car</h1>
                     <div className="px-2">
                         <Formik
@@ -65,8 +65,8 @@ export const AddCar : React.FunctionComponent = () => {
                         >
                             {({ errors, touched }) => (
                                 <Form className="justify-content-center">
-                                    <div className="form-group">
-                                        <label className="sr-only">Company</label>
+                                    <div className="form-group p-2">
+                                        <label className="sr-only ">Company</label>
                                         <Field
                                             name="company"
                                             type="text"
@@ -75,7 +75,7 @@ export const AddCar : React.FunctionComponent = () => {
                                         <ErrorMessage name="company" component="div" className="invalid-feedback text-left"></ErrorMessage>
 
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group p-2">
                                         <label className="sr-only">Model</label>
                                         <Field
                                             name="model"
@@ -84,7 +84,7 @@ export const AddCar : React.FunctionComponent = () => {
                                             placeholder="Model" />
                                         <ErrorMessage name="model" component="div" className="invalid-feedback text-left"></ErrorMessage>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group p-2">
                                         <label className="sr-only">Manufacture Date</label>
                                         <Field
                                             name="ManufactureDate"
@@ -93,10 +93,9 @@ export const AddCar : React.FunctionComponent = () => {
                                             placeholder="DD/MM/YYYY" />
                                         <ErrorMessage name="ManufactureDate" component="div" className="invalid-feedback text-left"></ErrorMessage>
                                     </div>
-                                    <button type="submit" className="btn btn-primary btn-lg">
+                                    <button type="submit" className="btn btn-primary btn-lg p-l-2">
                                         Add
-                                    </button>
-                                    <br /><br /><Link to="/">Cancel</Link>
+                                    </button>   <Link to="/">Cancel</Link>
                                 </Form>
                             )}
                         </Formik>

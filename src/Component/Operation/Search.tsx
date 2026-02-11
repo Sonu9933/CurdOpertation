@@ -13,7 +13,7 @@ export const SearchCar : React.FunctionComponent = () => {
                     <div className="px-2">
                         <form action="" className="justify-content-center">
                             <div className="form-group">
-                                <label className="sr-only">Company/Model Name</label>
+                                <label className="sr-only p-4">Company/Model Name</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -29,12 +29,12 @@ export const SearchCar : React.FunctionComponent = () => {
             </div>
 
             <h4 className="py-2 text-truncate">Search Result</h4>
-            <table className="table">
+            <table className="table border">
                 <thead>
                     <tr>
-                        <th>Company</th>
-                        <th>Model</th>
-                        <th>Manufacture Date</th>
+                        <th className="table-primary">Company</th>
+                        <th className="table-primary">Model</th>
+                        <th className="table-primary">Manufacture Date</th>
                     </tr>
                 </thead>
                 <tbody>

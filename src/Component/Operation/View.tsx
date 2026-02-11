@@ -8,13 +8,13 @@ export const View : React.FunctionComponent = () => {
     return (
         <div id="something" className="container p-4">
             <h1 className="text-center display-4 py-2 text-truncate">Cars</h1>
-            <table className="table">
+            <table className="table border">
                 <thead>
                     <tr>
-                        <th>Company</th>
-                        <th>Model</th>
-                        <th>Manufacture Date</th>
-                        <th>Action</th>
+                        <th className="table-primary">Company</th>
+                        <th className="table-primary">Model</th>
+                        <th className="table-primary">Manufacture Date</th>
+                        <th className="table-primary">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,9 +55,9 @@ export const View : React.FunctionComponent = () => {
                         )}
                 </tbody>
             </table>
-            <b>Operation :</b>
+            <b>Operation : </b>
             <Link to="/SearchCar"> Search </Link>
-             | <Link to="/AddCar"> Add</Link>
+            | <Link to="/AddCar"> Add</Link>
         </div>
     );
 };
