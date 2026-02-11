@@ -1,9 +1,7 @@
 //import { EditEmployee } from "../Operation/Edit";
 //import { act, render, fireEvent } from '@testing-library/react';
 //import { EmployeeContext } from "../Context/EmployeeContext";
-
-test("Update Employee click", () => {
-
+test("Update Employee click", function () {
     /*jest.mock('react-router-dom', () => ({
         useHistory: () => ({
             push: jest.fn(),
@@ -30,6 +28,5 @@ test("Update Employee click", () => {
     act(() => {
         fireEvent.click(buttonControl);
     })*/
-
     expect(1).toEqual(1);
-})
+});

@@ -1,25 +1,24 @@
-import React, { useContext } from "react";
-import { EmployeeContext } from "../Context/EmployeeContext";
+import { useContext } from "react";
+import { CarContext } from "../Context/CarContext";
 import { Link } from "react-router-dom";
-import { SEARCH } from "../Context/ActionType";
 
-export const SearchEmployee = () => {
-    const { state, dispatch } = useContext(EmployeeContext);
+export const SearchCar : React.FunctionComponent = () => {
+    const { state, dispatch } = useContext(CarContext);
     
     return (
         <div className="container">
             <div className="row">
                 <div className="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-                    <h1 className="display-4 py-2 text-truncate">Search Employee</h1>
+                    <h1 className="display-4 py-2 text-truncate">Search Car</h1>
                     <div className="px-2">
                         <form action="" className="justify-content-center">
                             <div className="form-group">
-                                <label className="sr-only">First Name</label>
+                                <label className="sr-only">Company/Model Name</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     onChange={e => dispatch({
-                                        type: SEARCH,
+                                        type: "SEARCH_CAR",
                                         payload: e.target.value
                                     })}
                                     placeholder="Start typing" />
@@ -33,20 +32,18 @@ export const SearchEmployee = () => {
             <table className="table">
                 <thead>
                     <tr>
-                        <th>Emp ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>DOB</th>
+                        <th>Company</th>
+                        <th>Model</th>
+                        <th>Manufacture Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {state.searchResult?.length > 0 ? (
-                        state.searchResult.map((employee, i) => (
+                    {state.carResult?.length > 0 ? (
+                        state.carResult.map((car, i) => (
                             <tr key={i}>
-                                <td>{employee.EmpId}</td>
-                                <td>{employee.FirstName}</td>
-                                <td>{employee.LastName}</td>
-                                <td>{employee.DOB}</td>
+                                <td>{car.Company}</td>
+                                <td>{car.Model}</td>
+                                <td>{car.ManufactureDate}</td>
                             </tr>
                         ))
                     ) : (
